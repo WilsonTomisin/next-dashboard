@@ -10,7 +10,6 @@ import {
   Revenue,
 } from './definitions';
 import { formatCurrency } from './utils';
-import { log } from 'console';
 import { resolve } from 'path';
 
 export async function fetchRevenue() {
@@ -43,7 +42,7 @@ export async function fetchLatestInvoices() {
 
     // console.log(` fetching latest invoices in 4 seconds...`);
 
-    // await new Promise((resolve) => setTimeout( resolve, 4000))
+    // await new Promise((resolve) => 3setTimeout( resolve, 4000))
     
     const data = await sql<LatestInvoiceRaw>`
       SELECT invoices.amount, customers.name, customers.image_url, customers.email, invoices.id
